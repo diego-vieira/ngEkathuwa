@@ -1,12 +1,12 @@
 {
-  "name": "ekathuwa",
+  "name": "bsmodal",
   "version": "0.1.2",
   "description": "Ekathuwa Angular Bootstrap3 modal service",
   "keywords": [
     "angular","bootstrap"
   ],
-  "homepage": "https://github.com/sarath2/ngEkathuwa",
-  "bugs": "https://github.com/sarath2/ngEkathuwa/issues",
+  "homepage": "https://github.com/sarath2/ngBsmodal",
+  "bugs": "https://github.com/sarath2/ngBsmodal/issues",
   "author": {
     "name": "Sarath Ambegoda",
     "email": "sarath2mail@gmail.com",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sarath2/ngEkathuwa.git"
+    "url": "https://github.com/sarath2/ngBsmodal.git"
   },
   "licenses": [
     {

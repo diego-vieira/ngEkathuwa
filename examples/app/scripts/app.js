@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ekathuwaApp', ['ngRoute','ngEkathuwa'])
+angular.module('bsmodalApp', ['ngRoute','ngBsmodal'])
     .config(function ($routeProvider) {
     $routeProvider
         .when('/', {

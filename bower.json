@@ -1,5 +1,5 @@
 {
-  "name": "ngEkathuwa",
+  "name": "ngBsmodal",
   "version": "0.1.2",
   "dependencies": {
     "angular": "~1.2.0-rc.2",
@@ -9,16 +9,16 @@
     "angular-mocks": "~1.2.0-rc.2",
     "jquery": "~2.0.3"
   },
-  "homepage": "https://github.com/sarath2/ngEkathuwa",
+  "homepage": "https://github.com/sarath2/ngBsmodal",
   "authors": [
     "sarath2 <sarath2mail@gmail.com>"
   ],
-  "description": "Angularjs Bootstrap 3 Modal service - ngEkathuwa",
-  "main": "ekathuwa.js",
+  "description": "Angularjs Bootstrap 3 Modal service - ngBsmodal",
+  "main": "bsmodal.js",
   "keywords": [
     "modal",
-    "ngEkathuwa",
-    "ekathuwa",
+    "ngBsmodal",
+    "bsmodal",
     "bootstrap",
     "bootstrap3",
     "angular",

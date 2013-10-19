@@ -1,20 +1,20 @@
 /**
- * ekathuwa
+ * bsmodal
  * @version v0.1.2 - 2013-09-11
- * @link https://github.com/sarath2/ngEkathuwa
+ * @link https://github.com/sarath2/ngBsmodal
  * @author Sarath Ambegoda <sarath2mail@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
 (function (window, document, undefined) {
   'use strict';
-  angular.module('ngEkathuwa', ['ngRoute']);
-  angular.module('ngEkathuwa', ['ngRoute']).run([
+  angular.module('ngBsmodal', ['ngRoute']);
+  angular.module('ngBsmodal', ['ngRoute']).run([
     '$rootScope',
-    '$ekathuwa',
-    function ($rootScope, $ekathuwa) {
-      $rootScope.$ekathuwa = $ekathuwa;
+    '$bsmodal',
+    function ($rootScope, $bsmodal) {
+      $rootScope.$bsmodal = $bsmodal;
     }
-  ]).provider('$ekathuwa', function () {
+  ]).provider('$bsmodal', function () {
     this.$get = [
       '$compile',
       '$rootScope',
@@ -23,7 +23,7 @@
       function ($compile, $rootScope, $timeout, $q) {
         this.modal = function (op) {
           var d = {
-              id: 'ekathuwaModalID',
+              id: 'bsmodalModalID',
               scope: $rootScope.$new(),
               controller: null,
               backdrop: true,
@@ -120,8 +120,8 @@
             break;
           }
           var mq = '#' + op.id + ' .modal-dialog { ' + s + '} @media (max-width: 768px) {' + '#' + op.id + ' .modal-dialog {width:90%;}}';
-          angular.element('#ekathuwaSt' + op.id).remove();
-          angular.element('head').append('<style id="ekathuwaSt' + op.id + '">' + mq + '</style>');
+          angular.element('#bsmodalSt' + op.id).remove();
+          angular.element('head').append('<style id="bsmodalSt' + op.id + '">' + mq + '</style>');
           angular.element('#' + op.id).remove();
           var m = angular.element(t);
           angular.element('body').append(m);

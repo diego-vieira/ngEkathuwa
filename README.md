@@ -1,9 +1,9 @@
-ngEkathuwa - v0.1.2
+ngBsmodal - v0.1.2
 ==========
 
 #### Angularjs Bootstrap 3 Modal service - Ekathuwa
 ==============================================
-[Examples: ngEkathuwa](http://plnkr.co/ebDtSMw6w0IZquaglEMe)
+[Examples: ngBsmodal](http://plnkr.co/ebDtSMw6w0IZquaglEMe)
 
 ###### This given you to easily handle Bootstrap 3 Modal window with Angularjs.
 ###### It is more flexible...
@@ -18,21 +18,21 @@ ngEkathuwa - v0.1.2
 1. Include `<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">` in the head of your document.
 2. Include `<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js"></script>`
 3. Include ` <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>`
-4. Then include `ekathuwa.min.js`
-5. Declare a module dependency, in your module `'[ngEkathuwa']`
-6. Declare a controller dependency, in your controller `$ekathuwa`
-7. Then use it `$ekathuwa.modal(options)`
+4. Then include `bsmodal.min.js`
+5. Declare a module dependency, in your module `'[ngBsmodal']`
+6. Declare a controller dependency, in your controller `$bsmodal`
+7. Then use it `$bsmodal.modal(options)`
 
 
 
 #### Ekathuwa API and examples
 =============================
 
-##### ngEkathuwa Options
+##### ngBsmodal Options
 <pre>
 Default options
 -------------------------
-id:                (string)    "ekathuwaModalID"
+id:                (string)    "bsmodalModalID"
 scope:                         $rootScope
 controller:        (string)    null
 show:              (boolean)   true
@@ -59,17 +59,17 @@ footerSaveBtn:     (boolean)   false
 </pre>
 
     //Basic Modal
-    $scope.ekathuwaModalBasic = function () {
-        $ekathuwa.modal({
-            id: "ekathuwaModalBasicId",
+    $scope.bsmodalModalBasic = function () {
+        $bsmodal.modal({
+            id: "bsmodalModalBasicId",
             headerText:"Ekathuwa modal header",
         });
     }
 
     //Fullscreen Modal
-    $scope.ekathuwaModalTemp = function () {
-        $ekathuwa.modal({
-            id: "ekathuwaModalTempId",
+    $scope.bsmodalModalTemp = function () {
+        $bsmodal.modal({
+            id: "bsmodalModalTempId",
             scope: $scope,
             templateURL: "modal-template.html",
             contentPreSize: "fl"
@@ -77,9 +77,9 @@ footerSaveBtn:     (boolean)   false
     }
 
     //Modal by template with stylish(350px width overwrite from 80%)
-    $scope.ekathuwaModalStyle = function () {
-        $ekathuwa.modal({
-            id: "ekathuwaModalTempId",
+    $scope.bsmodalModalStyle = function () {
+        $bsmodal.modal({
+            id: "bsmodalModalTempId",
             scope: $scope,
             templateURL: "modal-template.html",
             contentStyle: "width:350px;heigth:400px;background-color:#1b78f7;",
@@ -88,19 +88,19 @@ footerSaveBtn:     (boolean)   false
     }
 
     //Large screen modal with inline html
-    $scope.ekathuwaModalTempHTML = function () {
-        $ekathuwa.modal({
-            id: "ekathuwaTemlHTMLId",
+    $scope.bsmodalModalTempHTML = function () {
+        $bsmodal.modal({
+            id: "bsmodalTemlHTMLId",
             scope: $scope,
             contentPreSize: "lg",
-            templateHTML: '<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade" id="ekathuwaTemlHTMLId" style="display: none;"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button aria-hidden="true" data-dismiss="modal" class="close" type="button">x</button><h4 id="myModalLabel" class="modal-title">Ekathuwa Modal Heading</h4></div><div class="modal-body"><h4>Ekathuwa modal body.</h4><button class="btn btn-warning" ng-click="btnMsgFromCntl()">Get Message</button><div class="modal-footer"><button data-dismiss="modal" class="btn btn-default" type="button">Close</button><button class="btn btn-primary" type="button">Save changes</button></div></div></div></div>'
+            templateHTML: '<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade" id="bsmodalTemlHTMLId" style="display: none;"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button aria-hidden="true" data-dismiss="modal" class="close" type="button">x</button><h4 id="myModalLabel" class="modal-title">Ekathuwa Modal Heading</h4></div><div class="modal-body"><h4>Ekathuwa modal body.</h4><button class="btn btn-warning" ng-click="btnMsgFromCntl()">Get Message</button><div class="modal-footer"><button data-dismiss="modal" class="btn btn-default" type="button">Close</button><button class="btn btn-primary" type="button">Save changes</button></div></div></div></div>'
         });
     }
 
     //Modal body from template and set header text
-    $scope.ekathuwaModalBodyTempURL = function () {
-        $ekathuwa.modal({
-            id: "ekathuwaBodyTempLId",
+    $scope.bsmodalModalBodyTempURL = function () {
+        $bsmodal.modal({
+            id: "bsmodalBodyTempLId",
             scope: $scope,
             headerText:"Ekathuwa modal header",
             bodyTemplateURL: 'modal-template-body.html'
@@ -108,9 +108,9 @@ footerSaveBtn:     (boolean)   false
     }
 
     //Footerless modal
-    $scope.ekathuwaModalFooterless = function () {
-        $ekathuwa.modal({
-            id: "ekathuwaBodyTempLId",
+    $scope.bsmodalModalFooterless = function () {
+        $bsmodal.modal({
+            id: "bsmodalBodyTempLId",
             scope: $scope,
             headerText:"Ekathuwa modal header",
             bodyTemplateURL: 'modal-template-body.html',
@@ -119,9 +119,9 @@ footerSaveBtn:     (boolean)   false
     }
 
     //Headerless modal
-    $scope.ekathuwaModalHeaderless = function () {
-        $ekathuwa.modal({
-            id: "ekathuwaBodyTempLId",
+    $scope.bsmodalModalHeaderless = function () {
+        $bsmodal.modal({
+            id: "bsmodalBodyTempLId",
             scope: $scope,
             bodyTemplateURL: 'modal-template-body.html',
             header:false
@@ -130,9 +130,9 @@ footerSaveBtn:     (boolean)   false
 
     //Header/Footer stylish from css class modal
     //Usefull for set your all modals header to same style
-    $scope.ekathuwaModalHeaderless = function () {
-        $ekathuwa.modal({
-            id: "ekathuwaBodyTempLId",
+    $scope.bsmodalModalHeaderless = function () {
+        $bsmodal.modal({
+            id: "bsmodalBodyTempLId",
             scope: $scope,
             bodyTemplateURL: 'modal-template-body.html',
             headerClass : "ribbon blue",  //set your css class
@@ -141,9 +141,9 @@ footerSaveBtn:     (boolean)   false
     }
 
     //Modal via template body Url and show hide with promisess
-    $scope.ekathuwaModalPromisses = function () {
-       var promise = $ekathuwa.modal({
-            id: "ekathuwaPromisId",
+    $scope.bsmodalModalPromisses = function () {
+       var promise = $bsmodal.modal({
+            id: "bsmodalPromisId",
             show: false,
             scope: $scope,
             bodyTemplateURL: 'modal-template-body.html',
@@ -165,14 +165,14 @@ footerSaveBtn:     (boolean)   false
             <code>id</code>
         </td>
         <td>
-            <code>default: ekathuwaModalID</code>
+            <code>default: bsmodalModalID</code>
         </td>
         <td>Set your modal ID.
             <br/>Id avoid namespace collisions.Most important, when modal inside modal(nested modal)</td>
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({id:"yourModalId"});</pre>
+            <pre>$bsmodal.modal({id:"yourModalId"});</pre>
         </td>
     </tr>
     <tr>
@@ -186,7 +186,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({scope:$scope});</pre>
+            <pre>$bsmodal.modal({scope:$scope});</pre>
         </td>
     </tr>
     <tr>
@@ -200,7 +200,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({controller:"ekathuwaModalCtl"});</pre>
+            <pre>$bsmodal.modal({controller:"bsmodalModalCtl"});</pre>
         </td>
     </tr>
     <tr>
@@ -215,7 +215,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>var p = $ekathuwa.modal({id:"modalPromisses",show:false});</pre>
+            <pre>var p = $bsmodal.modal({id:"modalPromisses",show:false});</pre>
             <pre>$q.when(p).then(function (m) { m.modal('show'); });</pre>
         </td>
     </tr>
@@ -231,7 +231,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({backdrop:"static"});</pre>
+            <pre>$bsmodal.modal({backdrop:"static"});</pre>
         </td>
     </tr>
     <tr>
@@ -245,7 +245,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({keyboard:false});</pre>
+            <pre>$bsmodal.modal({keyboard:false});</pre>
         </td>
     </tr>
     <tr>
@@ -261,7 +261,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({id:"yourModalId",contentStyle:"width:350px;heigth:400px;background-color:red;"});</pre>
+            <pre>$bsmodal.modal({id:"yourModalId",contentStyle:"width:350px;heigth:400px;background-color:red;"});</pre>
         </td>
     </tr>
     <tr>
@@ -276,7 +276,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({id:"yourModalId",contentStyle:"width:350px;heigth:400px;background-color:#1b78f7;",contentCustomSize:80});</pre>
+            <pre>$bsmodal.modal({id:"yourModalId",contentStyle:"width:350px;heigth:400px;background-color:#1b78f7;",contentCustomSize:80});</pre>
         </td>
     </tr>
     <tr>
@@ -301,7 +301,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({id:"yourModalId",contentStyle:"width:350px;heigth:400px;background-color:#1b78f7;",contentPreSize:'lg'});</pre>
+            <pre>$bsmodal.modal({id:"yourModalId",contentStyle:"width:350px;heigth:400px;background-color:#1b78f7;",contentPreSize:'lg'});</pre>
         </td>
     </tr>
     <tr>
@@ -315,7 +315,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({ id: "ekathuwaModalTempId", scope: $scope, templateURL: "./views/modal-template1.html" });</pre>
+            <pre>$bsmodal.modal({ id: "bsmodalModalTempId", scope: $scope, templateURL: "./views/modal-template1.html" });</pre>
         </td>
     </tr>
     <tr>
@@ -329,7 +329,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({ id: 'ekathuwaTemlHTMLId', scope: $scope, contentPreSize: 'fl', templateHTML:''});</pre>
+            <pre>$bsmodal.modal({ id: 'bsmodalTemlHTMLId', scope: $scope, contentPreSize: 'fl', templateHTML:''});</pre>
         </td>
     </tr>
     <tr>
@@ -344,7 +344,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({ id: "ekathuwaBodyTempLId", scope: $scope, bodyTemplateURL: './views/modal-template-body.html' });</pre>
+            <pre>$bsmodal.modal({ id: "bsmodalBodyTempLId", scope: $scope, bodyTemplateURL: './views/modal-template-body.html' });</pre>
         </td>
     </tr>
     <tr>
@@ -361,7 +361,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({ id: "ekathuwaBodyTempLHTMLId", scope: $scope, bodyTemplate: 'This is a modal body' });</pre>
+            <pre>$bsmodal.modal({ id: "bsmodalBodyTempLHTMLId", scope: $scope, bodyTemplate: 'This is a modal body' });</pre>
         </td>
     </tr>
     <tr>
@@ -375,7 +375,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, header: false });</pre>
+            <pre>$bsmodal.modal({ id: "bsmodalModalId", scope: $scope, header: false });</pre>
         </td>
     </tr>
     <tr>
@@ -389,7 +389,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, headerTemplate: 'This is a modal header' });</pre>
+            <pre>$bsmodal.modal({ id: "bsmodalModalId", scope: $scope, headerTemplate: 'This is a modal header' });</pre>
         </td>
     </tr>
     <tr>
@@ -403,7 +403,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, headerText: "This is header" });</pre>
+            <pre>$bsmodal.modal({ id: "bsmodalModalId", scope: $scope, headerText: "This is header" });</pre>
         </td>
     </tr>
     <tr>
@@ -417,7 +417,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, headerCloseBtn: false });</pre>
+            <pre>$bsmodal.modal({ id: "bsmodalModalId", scope: $scope, headerCloseBtn: false });</pre>
         </td>
     </tr>
     <tr>
@@ -431,7 +431,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, footer: false });</pre>
+            <pre>$bsmodal.modal({ id: "bsmodalModalId", scope: $scope, footer: false });</pre>
         </td>
     </tr>
     <tr>
@@ -445,7 +445,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, footerTemplate: 'This is footer' });</pre>
+            <pre>$bsmodal.modal({ id: "bsmodalModalId", scope: $scope, footerTemplate: 'This is footer' });</pre>
         </td>
     </tr>
     <tr>
@@ -459,7 +459,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, footerCloseBtn: false });</pre>
+            <pre>$bsmodal.modal({ id: "bsmodalModalId", scope: $scope, footerCloseBtn: false });</pre>
         </td>
     </tr>
     <tr>
@@ -473,7 +473,7 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td colspan="3">
-            <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, footerSaveBtn: true });</pre>
+            <pre>$bsmodal.modal({ id: "bsmodalModalId", scope: $scope, footerSaveBtn: true });</pre>
         </td>
     </tr>
 </table>
